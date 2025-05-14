@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Balance Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Balance Board – Simple Credit Tracker</h1>
+  
+  <form id="transaction-form">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="number" id="amount" placeholder="Amount" required>
+    
+    <select id="type">
+      <option value="given">Given</option>
+      <option value="borrowed">Borrowed</option>
+    </select>
+
+    <input type="date" id="date" required>
+    <input type="date" id="dueDate" required>
+    <input type="text" id="notes" placeholder="Notes (optional)">
+    
+    <button type="submit">Add Transaction</button>
+  </form>
+
+  <div id="filters">
+    <select id="filter-type">
+      <option value="all">All</option>
+      <option value="given">Given</option>
+      <option value="borrowed">Borrowed</option>
+    </select>
+  </div>
+
+  <div id="transaction-list"></div>
+
+  <button id="export-btn">Export Data</button>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
